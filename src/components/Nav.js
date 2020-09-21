@@ -1,11 +1,37 @@
-import React from "react";
+import React, {useState, useEffect} from 'react';
 
-const Nav = () => {
-    return(
-        <div>
-            <h1>Hello from the Nav</h1>
+import '../App.css';
+import { Link } from 'react-router-dom';
+
+
+const menuItems = [
+    'Home', 
+    'Support',
+    'Messages',
+    'Browse'
+]
+function Nav() {
+    return (
+        <div className="App">
+          <header className="nav">
+            <nav>
+              <h1 className='nav-header'>Canary</h1>
+              {
+                menuItems.map(item => (
+                <Link 
+                  className='nav-link' 
+                  key={item} 
+                  id={item}
+                  >
+                    {item}
+                </Link>
+                ))
+              }
+            </nav>     
+          </header>
+    
         </div>
-    )
+        
+      );
 }
-
 export default Nav;
