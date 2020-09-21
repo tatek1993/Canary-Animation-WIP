@@ -51,6 +51,11 @@ nav {
   /* background-color: red; */
 }
 
+.placeholder-text {
+  margin: 0 6rem;
+  text-align: left;
+}
+
 .nav-link {
   text-decoration: none;
   color: #BAFFDD;
